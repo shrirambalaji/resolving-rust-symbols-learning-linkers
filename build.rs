@@ -1,6 +1,13 @@
 use std::process::Command;
 
 fn main() {
+    // Tell cargo to tell rustc to link the system shared library.
+
+    // run this only on macOS
+    if std::env::var("CARGO_CFG_TARGET_OS").unwrap() == "macos" {
+        println!("cargo:rustc-link-lib=framework=System");
+    }
+
     // rerun if foo.rs or bar.rs changes
     println!("cargo:rerun-if-changed=src/foo.rs");
     println!("cargo:rerun-if-changed=src/bar.rs");
