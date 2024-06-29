@@ -1,8 +1,13 @@
+extern "C" {
+    fn foo();
+    fn bar();
+    static mut Global: i32;
+}
+
 fn main() {
-    extern "C" {
-        fn bar();
-    }
     unsafe {
+        foo();
         bar();
+        println!("Global: {}", Global);
     }
 }

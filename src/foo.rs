@@ -1,4 +1,3 @@
-#![crate_type = "staticlib"]
 #![no_main]
 
 #[no_mangle]
