@@ -30,8 +30,6 @@ fn main() {
         .status()
         .unwrap();
 
-    // Tell cargo to tell rustc to link the system foo library
-    // shared library.
     println!("cargo:rustc-link-search=native=target/out");
     println!("cargo:rustc-link-lib=static=foo");
     println!("cargo:rustc-link-lib=static=bar");
