@@ -1,9 +1,8 @@
+#![allow(warnings)]
 #![no_main]
 
-#[no_mangle]
 extern "C" {
     static mut Global: i32;
-    fn foo();
 }
 
 #[no_mangle]

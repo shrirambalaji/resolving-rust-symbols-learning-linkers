@@ -1,3 +1,4 @@
+#![allow(warnings)]
 #![no_main]
 
 #[no_mangle]
